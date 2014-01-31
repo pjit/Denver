@@ -30,14 +30,31 @@ var DENVector = (function() {
             // Nope. Already set to 0
         }
 
-        vector.toString = function () {
+        vector.toString = function() {
             return "(" + vector.x + ", " + vector.y + ", " + vector.z + ")";
         };
+
+        vector.invert = function() {
+            vector.x = -vector.x;
+            vector.y = -vector.y;
+            vector.z = -vector.z;
+        }
 
         return vector;
     }
 
     return {
-        create : createVector
+        create : createVector,
+        add : function() {
+            if (arguments.length == 2) {
+                var v = DENVector.create();
+
+                v.x = (arguments[0].x || 0) + (arguments[1].x || 0);
+                v.y = (arguments[0].y || 0) + (arguments[1].y || 0);
+                v.z = (arguments[0].z || 0) + (arguments[1].z || 0);
+
+                return v;
+            }
+        }
     };
 }());
