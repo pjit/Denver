@@ -38,8 +38,11 @@ var DENVector = (function() {
             vector.x = -vector.x;
             vector.y = -vector.y;
             vector.z = -vector.z;
-        }
+        };
 
+        vector.magnitude = function() {
+          return Math.sqrt(vector.x*vector.x + vector.y*vector.y + vector.z*vector.z);
+        };
         return vector;
     }
 
