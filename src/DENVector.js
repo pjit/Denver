@@ -43,6 +43,16 @@ var DENVector = (function() {
         vector.magnitude = function() {
           return Math.sqrt(vector.x*vector.x + vector.y*vector.y + vector.z*vector.z);
         };
+
+        vector.normalize = function() {
+            var n = vector.magnitude();
+
+            if (n > 0) {
+                vector.x = vector.x/n;
+                vector.y = vector.y/n;
+                vector.z = vector.z/n;
+            }
+        };
         return vector;
     }
 
@@ -55,6 +65,19 @@ var DENVector = (function() {
                 v.x = (arguments[0].x || 0) + (arguments[1].x || 0);
                 v.y = (arguments[0].y || 0) + (arguments[1].y || 0);
                 v.z = (arguments[0].z || 0) + (arguments[1].z || 0);
+
+                return v;
+            }
+        },
+        normal : function() {
+            if (arguments.length == 1) {
+                var v = DENVector.create();
+
+                v.x = (arguments[0].x || 0);
+                v.y = (arguments[0].y || 0);
+                v.z = (arguments[0].z || 0);
+
+                v.normalize();
 
                 return v;
             }
