@@ -6,6 +6,16 @@
     <script src="DENParticle.js"></script>
 </head>
 <body>
+    <script type="text/javascript">
+        var v1 = DENVector.create(1,2,3);
+        var p1 = DENParticle.create();
 
+        p1.setPosition(v1);
+        v1.invert();
+        p1.setVelocity(v1);
+
+        console.log(p1.toString());
+        console.log(v1.toString());
+    </script>
 </body>
 </html>
