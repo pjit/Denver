@@ -44,6 +44,11 @@ var DENVector = (function() {
           return Math.sqrt(vector.x*vector.x + vector.y*vector.y + vector.z*vector.z);
         };
 
+        // sqrt is slow on some machines an sometimes we need square only
+        vector.squareMagnitude = function() {
+            return (vector.x*vector.x + vector.y*vector.y + vector.z*vector.z);
+        };
+
         vector.normalize = function() {
             var n = vector.magnitude();
 
@@ -53,6 +58,15 @@ var DENVector = (function() {
                 vector.z = vector.z/n;
             }
         };
+        // multiply by scalar
+        vector.multiply = function() {
+            if (arguments.length === 1) {
+                vector.x *= arguments[0];
+                vector.y *= arguments[0];
+                vector.z *= arguments[0];
+            }
+        };
+
         return vector;
     }
 
@@ -69,15 +83,50 @@ var DENVector = (function() {
                 return v;
             }
         },
-        normal : function() {
-            if (arguments.length == 1) {
+        // scalarProduct or dotProduct
+        scalarProduct : function() {
+            if (arguments.length == 2) {
+                var result = (arguments[0].x || 0) * (arguments[1].x || 0) +
+                             (arguments[0].y || 0) * (arguments[1].y || 0) +
+                             (arguments[0].z || 0) * (arguments[1].z || 0);
+
+                return result;
+            }
+        },
+
+        // vector product or cross product
+        vectorProduct : function() {
+            if (arguments.length == 2) {
                 var v = DENVector.create();
 
-                v.x = (arguments[0].x || 0);
-                v.y = (arguments[0].y || 0);
-                v.z = (arguments[0].z || 0);
+                v.x = (arguments[0].y || 0) * (arguments[1].z || 0) -
+                      (arguments[0].z || 0) * (arguments[1].y || 0);
+
+                v.y = (arguments[0].z || 0) * (arguments[1].x || 0) -
+                      (arguments[0].x || 0) * (arguments[1].z || 0);
+
+                v.z = (arguments[0].x || 0) * (arguments[1].y || 0) -
+                      (arguments[0].y || 0) * (arguments[1].x || 0);
+
+                return v;
+            }
+        },
+
+        normal : function() {
+            if (arguments.length == 1) {
+                var v = DENVector.create(arguments[0].x || 0, arguments[0].y || 0, arguments[0].z || 0);
 
                 v.normalize();
+
+                return v;
+            }
+        },
+        scale : function() {
+            if (arguments.length == 2) {
+                var v = DENVector.create(arguments[0].x || 0, arguments[0].y || 0, arguments[0].z || 0);
+                var scaleFactor = arguments[1];
+
+                v.multiply(scaleFactor);
 
                 return v;
             }
