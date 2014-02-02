@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98615448-6be4-4f8f-9e38-2afcc2ee24a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DENVector.js" afterPath="$PROJECT_DIR$/src/DENVector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DENParticle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Denver.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391281996877" ignored="false" />
+    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391315478359" ignored="false" />
     <file path="/DENVector.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391286020450" ignored="false" />
     <file path="/TestDebug.html" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391131144448" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,13 +48,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DENVector.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DENVector.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DENVector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="0" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.4207317">
+            <state line="113" column="0" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#158#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DENParticle.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,6 +117,7 @@
         <option value="$PROJECT_DIR$/DENVector.js" />
         <option value="$PROJECT_DIR$/../bocoup-training-js-best-practices/exercises/TestDebug.html" />
         <option value="$PROJECT_DIR$/src/DENVector.js" />
+        <option value="$PROJECT_DIR$/src/DENParticle.js" />
       </list>
     </option>
   </component>
@@ -262,7 +272,11 @@
       <created>1391282003584</created>
       <updated>1391282003584</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="dot and scalar product">
+      <created>1391315484253</created>
+      <updated>1391315484253</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -350,7 +364,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="normal and normalize functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="dot and scalar product" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -368,6 +382,7 @@
     <MESSAGE value="DENVector - invert and add" />
     <MESSAGE value="DENVector: magnitude" />
     <MESSAGE value="normal and normalize functions" />
+    <MESSAGE value="dot and scalar product" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -375,15 +390,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DENVector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="86" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#158#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TestDebug.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -490,10 +496,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DENVector.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.4207317">
+        <state line="113" column="0" selection-start="3366" selection-end="3366" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#158#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
