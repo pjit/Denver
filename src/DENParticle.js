@@ -20,17 +20,17 @@ var DENParticle = (function() {
        particle.velocity = DENVector.create(0,0,0);
        // Acceleration of the particle. This value can be used to set acceleration due
        // to gravity (its primary use) or any other constant acceleration
-       particle.acceleration = DENVector.create(0,0,0);
+       particle.acceleration = DENVector.create(0,-10,0);
        // Holds the amount of damping applied to linear motion. Dumping is required
        // to remove energy added through numerical instability in the integrator
-       particle.damping = 0;
+       particle.damping = 0.99;
        // Holds the inverse of the mass of the particle. It is more useful to hold
        // the inverse mass because integration is simpler and because in real-time
        // simulation i is more useful to have objects with infinite mass (immovable)
        // than zero mass (completely unstable in numerical simulation)
        // zero inverse mass = infinite mass  = immovable objects
        // zero mass = infinite inverse mass.
-       particle.inverseMass = 0;
+       particle.inverseMass = 1;
        // Holds accumulated force to be applied at the next simulation iteration only.
        // This value is zeroed at each integration step.
        particle.forceAccum = DENVector.create(0,0,0);
@@ -84,6 +84,13 @@ var DENParticle = (function() {
                 particle.inverseMass = 1/mass;
             }
        };
+       particle.addForce = function() {
+           if (arguments.length == 1) {
+               if (arguments[0].x) {// vector ??
+                    particle.forceAccum = DENVector.add(particle.forceAccum, arguments[0]);
+               }
+           }
+       }
        particle.toString = function() {
             return "position: " + particle.position.toString() + " velocity: " + particle.velocity.toString()
                 + " acceleration: " + particle.acceleration.toString()
@@ -119,6 +126,11 @@ var DENParticle = (function() {
                 }
             }
        };
+       // clear accumulated force
+       particle.clearAccumulator = function() {
+            particle.forceAccum.init();
+       };
+
        return particle;
    }
 

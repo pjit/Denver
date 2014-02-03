@@ -3,14 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="98615448-6be4-4f8f-9e38-2afcc2ee24a1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DENParticle.js" afterPath="$PROJECT_DIR$/src/DENParticle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DENVector.js" afterPath="$PROJECT_DIR$/src/DENVector.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Denver.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391385704354" ignored="false" />
-    <file path="/DENVector.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391286020450" ignored="false" />
+    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391397118850" ignored="false" />
+    <file path="/DENVector.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391397263833" ignored="false" />
     <file path="/TestDebug.html" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391366476128" ignored="false" />
-    <file path="/DENParticle.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391393992907" ignored="false" />
+    <file path="/DENParticle.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391397373479" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +53,7 @@
       <file leaf-file-name="DENVector.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DENVector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="24" selection-start="3421" selection-end="3421" vertical-scroll-proportion="0.0">
+            <state line="37" column="47" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -61,7 +62,7 @@
       <file leaf-file-name="DENParticle.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="66" selection-start="5071" selection-end="5071" vertical-scroll-proportion="0.58992803">
+            <state line="31" column="105" selection-start="1416" selection-end="1416" vertical-scroll-proportion="-1.4604317">
               <folding />
             </state>
           </provider>
@@ -70,7 +71,7 @@
       <file leaf-file-name="TestDebug.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestDebug.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="35" selection-start="426" selection-end="426" vertical-scroll-proportion="-10.625">
+            <state line="17" column="35" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -97,8 +98,8 @@
       <list>
         <option value="$PROJECT_DIR$/DENVector.js" />
         <option value="$PROJECT_DIR$/../bocoup-training-js-best-practices/exercises/TestDebug.html" />
-        <option value="$PROJECT_DIR$/src/DENVector.js" />
         <option value="$PROJECT_DIR$/src/TestDebug.html" />
+        <option value="$PROJECT_DIR$/src/DENVector.js" />
         <option value="$PROJECT_DIR$/src/DENParticle.js" />
       </list>
     </option>
@@ -166,14 +167,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="180" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="181" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="180" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/TestDebug.html" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="185" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="979" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="979" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="979" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="185" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="181" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -274,7 +275,11 @@
       <created>1391315484253</created>
       <updated>1391315484253</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="integrate method">
+      <created>1391394268119</created>
+      <updated>1391394268119</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -362,7 +367,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="dot and scalar product" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrate method" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -381,6 +386,7 @@
     <MESSAGE value="DENVector: magnitude" />
     <MESSAGE value="normal and normalize functions" />
     <MESSAGE value="dot and scalar product" />
+    <MESSAGE value="integrate method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -481,21 +487,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestDebug.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="35" selection-start="426" selection-end="426" vertical-scroll-proportion="-10.625">
+        <state line="17" column="35" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DENVector.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="24" selection-start="3421" selection-end="3421" vertical-scroll-proportion="0.0">
+        <state line="37" column="47" selection-start="947" selection-end="947" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="66" selection-start="5071" selection-end="5071" vertical-scroll-proportion="0.58992803">
+        <state line="31" column="105" selection-start="1416" selection-end="1416" vertical-scroll-proportion="-1.4604317">
           <folding />
         </state>
       </provider>

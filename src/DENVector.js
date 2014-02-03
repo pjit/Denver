@@ -34,6 +34,10 @@ var DENVector = (function() {
             return "(" + vector.x + ", " + vector.y + ", " + vector.z + ")";
         };
 
+        vector.init = function() {
+            vector.x = vector.y = vector.z = 0;
+        };
+
         vector.invert = function() {
             vector.x = -vector.x;
             vector.y = -vector.y;
