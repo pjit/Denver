@@ -16,11 +16,11 @@ var DENParticle = (function() {
        // Linear position,velocity of the particle in the world space
        // These two properties should not be changed directly - only through
        // integrator but acceleration can be set directly.
-       particle.position = DENVector.create(0,0,0);
-       particle.velocity = DENVector.create(0,0,0);
+       particle.position = new DENVector.vector(0,0,0);
+       particle.velocity = new DENVector.vector(0,0,0);
        // Acceleration of the particle. This value can be used to set acceleration due
        // to gravity (its primary use) or any other constant acceleration
-       particle.acceleration = DENVector.create(0,-10,0);
+       particle.acceleration = new DENVector.vector(0,-10,0);
        // Holds the amount of damping applied to linear motion. Dumping is required
        // to remove energy added through numerical instability in the integrator
        particle.damping = 0.99;
@@ -33,7 +33,7 @@ var DENParticle = (function() {
        particle.inverseMass = 1;
        // Holds accumulated force to be applied at the next simulation iteration only.
        // This value is zeroed at each integration step.
-       particle.forceAccum = DENVector.create(0,0,0);
+       particle.forceAccum = new DENVector.vector(0,0,0);
 
        particle.setProperty = function(propertyName, value) {
            if (value.length == 1) {
@@ -41,18 +41,18 @@ var DENParticle = (function() {
                    var arrayArg = value[0];
 
                    if (arrayArg.length >= 3) {
-                       particle[propertyName] = DENVector.create(arrayArg[0], arrayArg[1], arrayArg[2]);
+                       particle[propertyName] = new DENVector.vector(arrayArg[0], arrayArg[1], arrayArg[2]);
                    }
                    else if (arrayArg.length == 2) {
-                       particle[propertyName] = DENVector.create(arrayArg[0], arrayArg[1], 0);
+                       particle[propertyName] = new DENVector.vector(arrayArg[0], arrayArg[1], 0);
                    }
                    else if (arrayArg.length == 1) {
-                       particle[propertyName] = DENVector.create(arrayArg[0], 0, 0);
+                       particle[propertyName] = new DENVector.vector(arrayArg[0], 0, 0);
                    }
                }
                else {
                    if (value[0].x) { // vector ??
-                       particle[propertyName] = DENVector.create(value[0].x, value[0].y, value[0].z);
+                       particle[propertyName] = new DENVector.vector(value[0].x, value[0].y, value[0].z);
                    }
                }
            }
@@ -84,18 +84,20 @@ var DENParticle = (function() {
                 particle.inverseMass = 1/mass;
             }
        };
+       // Adds the given force to the particle, to be applied at the next iteration only.
        particle.addForce = function() {
            if (arguments.length == 1) {
                if (arguments[0].x) {// vector ??
-                    particle.forceAccum = DENVector.add(particle.forceAccum, arguments[0]);
+                    particle.forceAccum = new DENVector.vector(particle.forceAccum, arguments[0]);
                }
            }
-       }
+       };
        particle.toString = function() {
             return "position: " + particle.position.toString() + " velocity: " + particle.velocity.toString()
                 + " acceleration: " + particle.acceleration.toString()
                 + " damping: " + particle.damping.toString()
-                + " inverseMass: " + particle.inverseMass.toString();
+                + " inverseMass: " + particle.inverseMass.toString()
+                + " Accumulated force: " + particle.forceAccum.toString();
        };
        // Integrates the particle forward in time by the given amount.
        // This function uses a Newton-Euler integration method, which
@@ -122,6 +124,8 @@ var DENParticle = (function() {
                         // Impose drag
                         particle.velocity = DENVector.scale(particle.velocity,
                             Math.pow(particle.damping, duration));
+                        // Clear the forces
+                        particle.clearAccumulator();
                     }
                 }
             }
