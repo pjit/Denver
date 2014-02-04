@@ -12,6 +12,9 @@
 var DENVector = (function() {
     function _createVector() {
         vector = arguments[0];
+
+        vector.x = vector.y = vector.z = 0;
+
         if (arguments.length == 2) {
             valArgs = arguments[1];
             if (valArgs.length === 3) {
@@ -75,7 +78,6 @@ var DENVector = (function() {
 
     return {
         vector : function vector() {
-          this.x = this.y = this.z = 0;
           // Call internal function to set it
           _createVector(this, arguments);
         },

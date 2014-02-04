@@ -10,8 +10,8 @@
 //
 //
 var DENParticle = (function() {
-   function createParticle() {
-       var particle = {};
+   function _createParticle() {
+       particle = arguments[0];
 
        // Linear position,velocity of the particle in the world space
        // These two properties should not be changed directly - only through
@@ -134,11 +134,11 @@ var DENParticle = (function() {
        particle.clearAccumulator = function() {
             particle.forceAccum.init();
        };
-
-       return particle;
    }
 
    return {
-       create : createParticle
+       particle : function particle() {
+            _createParticle(this);
+       }
    };
 }());
