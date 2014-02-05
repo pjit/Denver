@@ -109,6 +109,25 @@ DENParticle.prototype.setMass = function(mass) {
 }
 
 //
+//
+//
+DENParticle.prototype.getMass = function(mass) {
+    if (this.inverseMass == 0) {
+        return Math.MAX_VALUE;
+    }
+    else {
+        return (1.0/this.inverseMass);
+    }
+}
+
+//
+//
+//
+DENParticle.prototype.hasFiniteMass = function() {
+    return (this.inverseMass != 0);
+}
+
+//
 // Adds the given force to the particle, to be applied at the next iteration only.
 //
 DENParticle.prototype.addForce = function() {
@@ -138,6 +157,8 @@ DENParticle.prototype.toString = function() {
 // reason it may be inaccurate in some cases.
 //
 DENParticle.prototype.integrate = function() {
+    if (this.inverseMass <= 0) return;
+
     if (arguments.length == 1) {
         var duration = arguments[0];
 
