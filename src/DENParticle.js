@@ -114,7 +114,7 @@ DENParticle.prototype.setMass = function(mass) {
 DENParticle.prototype.addForce = function() {
    if (arguments.length == 1) {
        if (arguments[0].x) {// vector ??
-           this.forceAccum = new DENVector(this.forceAccum, arguments[0]);
+           this.forceAccum.add(arguments[0]);
        }
    }
 }
@@ -147,16 +147,15 @@ DENParticle.prototype.integrate = function() {
                 var scaledVel = DENVector.scale(this.velocity, duration);
 
                 // Update linear position
-                this.position = DENVector.add(this.position, scaledVel);
+                this.position.add(scaledVel);
 
                 // Acceleration from the force
                 var scaledAcc = DENVector.scale(this.forceAccum, this.inverseMass);
                 var resultingAcc = DENVector.add(this.acceleration, scaledAcc);
-                var acc = DENVector.scale(resultingAcc, duration);
 
-                this.velocity = DENVector.add(this.velocity, acc);
+                this.velocity.add(DENVector.scale(resultingAcc, duration));
                 // Impose drag
-                this.velocity = DENVector.scale(this.velocity, Math.pow(this.damping, duration));
+                this.velocity.scale(Math.pow(this.damping, duration));
                 // Clear the forces
                 this.clearAccumulator();
             }

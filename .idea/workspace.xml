@@ -4,15 +4,14 @@
     <list default="true" id="98615448-6be4-4f8f-9e38-2afcc2ee24a1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DENParticle.js" afterPath="$PROJECT_DIR$/src/DENParticle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DENVector.js" afterPath="$PROJECT_DIR$/src/DENVector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestDebug.html" afterPath="$PROJECT_DIR$/src/TestDebug.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Denver.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391560418023" ignored="false" />
-    <file path="/DENVector.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391560530851" ignored="false" />
+    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391562381335" ignored="false" />
+    <file path="/DENVector.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391563189214" ignored="false" />
     <file path="/TestDebug.html" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391477246848" ignored="false" />
-    <file path="/DENParticle.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391562116517" ignored="false" />
+    <file path="/DENParticle.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391563229566" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,19 +50,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DENVector.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DENVector.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DENVector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="40" selection-start="2574" selection-end="2574" vertical-scroll-proportion="0.0">
+            <state line="109" column="67" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.34511435">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DENParticle.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DENParticle.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="86" selection-start="3809" selection-end="3809" vertical-scroll-proportion="0.24759872">
+            <state line="157" column="36" selection-start="4796" selection-end="4796" vertical-scroll-proportion="-35.68">
               <folding />
             </state>
           </provider>
@@ -100,8 +99,8 @@
       <list>
         <option value="$PROJECT_DIR$/DENVector.js" />
         <option value="$PROJECT_DIR$/../bocoup-training-js-best-practices/exercises/TestDebug.html" />
-        <option value="$PROJECT_DIR$/src/DENVector.js" />
         <option value="$PROJECT_DIR$/src/TestDebug.html" />
+        <option value="$PROJECT_DIR$/src/DENVector.js" />
         <option value="$PROJECT_DIR$/src/DENParticle.js" />
       </list>
     </option>
@@ -307,7 +306,11 @@
       <created>1391477306690</created>
       <updated>1391477306690</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Prototype - DENVector and DENParticle">
+      <created>1391562387309</created>
+      <updated>1391562387309</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -334,6 +337,7 @@
     <frame x="386" y="51" width="1632" height="1352" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31778425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -347,7 +351,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -395,7 +398,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed denver.particle : _createParticle" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prototype - DENVector and DENParticle" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -416,6 +419,7 @@
     <MESSAGE value="dot and scalar product" />
     <MESSAGE value="fixed denver.vector : _createVector" />
     <MESSAGE value="fixed denver.particle : _createParticle" />
+    <MESSAGE value="Prototype - DENVector and DENParticle" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -521,16 +525,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DENVector.js">
+    <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="40" selection-start="2574" selection-end="2574" vertical-scroll-proportion="0.0">
+        <state line="157" column="36" selection-start="4796" selection-end="4796" vertical-scroll-proportion="-35.68">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
+    <entry file="file://$PROJECT_DIR$/src/DENVector.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="86" selection-start="3809" selection-end="3809" vertical-scroll-proportion="0.24759872">
+        <state line="109" column="67" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.34511435">
           <folding />
         </state>
       </provider>

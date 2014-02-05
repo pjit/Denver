@@ -108,6 +108,27 @@ DENVector.prototype.multiply = function() {
 }
 
 //
+//
+//
+DENVector.prototype.add = function() {
+    if (arguments.length == 1) {
+        this.x += (arguments[0].x || 0);
+        this.y += (arguments[0].y || 0);
+        this.z += (arguments[0].z || 0);
+    }
+}
+
+//
+//
+//
+//
+//
+//
+DENVector.prototype.scale = function() {
+    this.multiply(arguments[0] || 1);
+}
+
+//
 // Static methods
 //
 
