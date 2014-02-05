@@ -33,28 +33,8 @@ var DENVector = (function() {
                 // Nope. Already set to 0
             }
 
-            vector.toString = function() {
-                return "(" + vector.x + ", " + vector.y + ", " + vector.z + ")";
-            };
 
-            vector.init = function() {
-                vector.x = vector.y = vector.z = 0;
-            };
 
-            vector.invert = function() {
-                vector.x = -vector.x;
-                vector.y = -vector.y;
-                vector.z = -vector.z;
-            };
-
-            vector.magnitude = function() {
-              return Math.sqrt(vector.x*vector.x + vector.y*vector.y + vector.z*vector.z);
-            };
-
-            // sqrt is slow on some machines an sometimes we need square only
-            vector.squareMagnitude = function() {
-                return (vector.x*vector.x + vector.y*vector.y + vector.z*vector.z);
-            };
 
             vector.normalize = function() {
                 var n = vector.magnitude();
@@ -76,7 +56,69 @@ var DENVector = (function() {
         }
     }
 
-    return {
+    function Vector() {
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
+
+        // Process any arguments if passed
+        if (arguments.length > 0) {
+            if (arguments.length == 1) {
+                if (Array.isArray(arguments[0])) {
+                    var arrayArg = arguments[0];
+
+                    if (arrayArg.length == 3) {
+                        this.x = arrayArg[0];
+                        this.y = arrayArg[1];
+                        this.z = arrayArg[2];
+                    }
+                    else if (arrayArg.length == 2) {
+                        this.x = arrayArg[0];
+                        this.y = arrayArg[1];
+                    }
+                    else if (arrayArg.length == 1) {
+                        this.x = arrayArg[0];
+                    }
+                }
+            }
+            else if (arguments.length == 3) {
+                this.x = arguments[0];
+                this.y = arguments[1];
+                this.z = arguments[2];
+            }
+        }
+    }
+    // Instance methods
+    Vector.prototype.toString = function() {
+      return "(" + this.x + ", " + this.y + ", " + this.z + ")";
+    };
+    // Init
+    Vector.prototype.init = function() {
+        this.x = this.y = this.z = 0;
+    };
+    // Invert
+    Vector.prototype.invert = function() {
+        this.x = -this.x;
+        this.y = -this.y;
+        this.z = -this.z;
+    };
+    // Magnitude of the vector
+    Vector.prototype.magnitude = function() {
+        return Math.sqrt(this.x*this.x + this.y*this.y + this.z*this.z);
+    };
+
+    // sqrt is slow on some machines an sometimes we need square only
+    Vector.prototype.squareMagnitude = function() {
+        return (this.x*this.x + this.y*this.y + this.z*this.z);
+    };
+    // Static methods
+    Vector.add = function() {
+
+    };
+
+    return {Vector: Vector};
+
+    return { // throw this
         vector : function vector() {
           // Call internal function to set it
           _createVector(this, arguments);
