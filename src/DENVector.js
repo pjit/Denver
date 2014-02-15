@@ -73,7 +73,7 @@ DENVector.prototype.invert = function() {
 // Magnitude of the vector
 //
 DENVector.prototype.magnitude = function() {
-    return Math.sqrt(this.x*this.x + this.y*this.y + this.z*this.z);
+    return Math.sqrt(this.squareMagnitude());
 }
 
 //
@@ -208,5 +208,3 @@ DENVector.scale = function() {
         return v;
     }
 }
-
-
