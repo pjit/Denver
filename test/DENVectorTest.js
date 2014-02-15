@@ -20,5 +20,4 @@ test( "DENVector Test", function() {
     v1.scale(5);
 
     ok(v1.x == 5 && v1.y === 10 && v1.z === 15, "Scaled v1(1,2,3) by 5");
-
 });
