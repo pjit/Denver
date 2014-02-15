@@ -9,7 +9,8 @@
 test( "DENVector Test", function() {
     var v1 = new DENVector(1,2,3);
 
-    ok( v1.x === 1 && v1.y === 2 && v1.z === 3, "constructed DENVector" );
+    ok(v1 instanceof  DENVector, "Constructed DENVector")
+    ok( v1.x === 1 && v1.y === 2 && v1.z === 3, "Constructed w/args" );
 
     var v2 = new DENVector(4,5,6);
 
@@ -62,4 +63,26 @@ test( "DENVector Test", function() {
 
     ok(v3.x === -3 && v3.y === 6 && v3.z === -3, "vectorProduct (1,2,3) and (4,5,6)");
 
+    v1.reset(2,-3,7);
+    v2.reset(-4,2,-4);
+
+    var scalarProduct = DENVector.scalarProduct(v1,v2);
+
+    strictEqual(scalarProduct, -42, "scalarProduct (2,-3,7) and (-4,2,-4)");
+
+    var v3 = v1;
+
+    ok(v3.x === 2 && v3.y === -3 && v3.z === 7, "vector assignment v1 to v3 (ref assignment)");
+
+    v1.x = 0;
+
+    ok(v3.x === 0 && v3.y === -3 && v3.z === 7, "v1 change affects v3");
+
+    var v4 = new DENVector(v1);
+
+    ok(v4.x === 0 && v4.y === -3 && v4.z === 7, "new v4 from v1");
+
+    v1.x = 2;
+
+    ok(v4.x === 0 && v4.y === -3 && v4.z === 7, "v1 change does not affect v4");
 });

@@ -36,6 +36,13 @@ function DENVector() {
                     this.x = arrayArg[0];
                 }
             }
+            else {
+                if (arguments[0] instanceof DENVector) {
+                    this.x = arguments[0].x;
+                    this.y = arguments[0].y;
+                    this.z = arguments[0].z;
+                }
+            }
         }
         else if (arguments.length == 3) {
             this.x = arguments[0];
