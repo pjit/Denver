@@ -15,5 +15,5 @@
 test( "DENParticle Test", function() {
     var p1 = new DENParticle();
 
-    ok(p1 instanceof  DENParticle, "DENParticle constructed" );
+    ok(p1 instanceof  DENParticle, "Construction" );
 });
