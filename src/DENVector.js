@@ -53,10 +53,17 @@ DENVector.prototype.toString = function() {
 }
 
 //
-// Init
+// reset
 //
-DENVector.prototype.init = function() {
-    this.x = this.y = this.z = 0;
+DENVector.prototype.reset = function() {
+    if (arguments.length == 0) {
+        this.x = this.y = this.z = 0;
+    }
+    else if (arguments.length == 3) {
+        this.x = arguments[0];
+        this.y = arguments[1];
+        this.z = arguments[2];
+    }
 }
 
 //
