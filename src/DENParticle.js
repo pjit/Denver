@@ -188,7 +188,7 @@ DENParticle.prototype.integrate = function() {
 // clear accumulated force
 //
 DENParticle.prototype.clearAccumulator = function() {
-    this.forceAccum.init();
+    this.forceAccum.reset();
 }
 
 

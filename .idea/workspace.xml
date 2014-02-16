@@ -8,13 +8,13 @@
     </list>
     <ignored path="Denver.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392527189353" ignored="false" />
+    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392575024079" ignored="false" />
     <file path="/DENVector.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392494569328" ignored="false" />
     <file path="/TestDebug.html" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391366476128" ignored="false" />
-    <file path="/DENParticle.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392528113397" ignored="false" />
+    <file path="/DENParticle.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392575623018" ignored="false" />
     <file path="/DENTest.html" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392494694693" ignored="false" />
-    <file path="/DENVectorTest.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392494852669" ignored="false" />
-    <file path="/DENParticleTest.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392528263810" ignored="false" />
+    <file path="/DENVectorTest.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392575317117" ignored="false" />
+    <file path="/DENParticleTest.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392575786755" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,7 @@
       <file leaf-file-name="DENParticleTest.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/DENParticleTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="45" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.83458644">
+            <state line="48" column="103" selection-start="1641" selection-end="1641" vertical-scroll-proportion="0.30075186">
               <folding />
             </state>
           </provider>
@@ -84,7 +84,7 @@
       <file leaf-file-name="DENParticle.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="67" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.0">
+            <state line="181" column="105" selection-start="5287" selection-end="5287" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -93,7 +93,7 @@
       <file leaf-file-name="DENVectorTest.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/DENVectorTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="97" selection-start="1629" selection-end="1629" vertical-scroll-proportion="0.0">
+            <state line="86" column="101" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,7 +132,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="262" />
+    <option name="x" value="143" />
     <option name="y" value="22" />
     <option name="width" value="1120" />
     <option name="height" value="824" />
@@ -401,7 +401,11 @@
       <created>1392495463083</created>
       <updated>1392495463083</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="DENParticle tests">
+      <created>1392528300821</created>
+      <updated>1392528300821</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -425,7 +429,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="262" y="22" width="1120" height="824" extended-state="0" />
+    <frame x="143" y="22" width="1120" height="824" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31778425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -604,13 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/DENVectorTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="97" selection-start="1629" selection-end="1629" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DENVector.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="26" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.0">
@@ -620,14 +617,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="67" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.0">
+        <state line="181" column="105" selection-start="5287" selection-end="5287" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/DENVectorTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="101" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/DENParticleTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="45" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.83458644">
+        <state line="48" column="103" selection-start="1641" selection-end="1641" vertical-scroll-proportion="0.30075186">
           <folding />
         </state>
       </provider>
