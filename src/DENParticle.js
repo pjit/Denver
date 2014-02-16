@@ -52,7 +52,7 @@ DENParticle.prototype.setProperty = function(propertyName, value) {
            }
        }
        else {
-           if (value[0].x) { // vector ??
+           if (value[0] instanceof DENVector) { // vector ??
                this[propertyName] = new DENVector(value[0].x, value[0].y, value[0].z);
            }
        }
@@ -132,7 +132,7 @@ DENParticle.prototype.hasFiniteMass = function() {
 //
 DENParticle.prototype.addForce = function() {
    if (arguments.length == 1) {
-       if (arguments[0].x) {// vector ??
+       if (arguments[0] instanceof  DENVector) { // vector ??
            this.forceAccum.add(arguments[0]);
        }
    }
