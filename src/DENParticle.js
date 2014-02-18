@@ -130,11 +130,10 @@ DENParticle.prototype.hasFiniteMass = function() {
 //
 // Adds the given force to the particle, to be applied at the next iteration only.
 //
-DENParticle.prototype.addForce = function() {
-   if (arguments.length == 1) {
-       if (arguments[0] instanceof  DENVector) { // vector ??
-           this.forceAccum.add(arguments[0]);
-       }
+DENParticle.prototype.addForce = function(force) {
+   var f = force || {};
+   if (f instanceof  DENVector) {
+       this.forceAccum.add(f);
    }
 }
 
@@ -156,32 +155,27 @@ DENParticle.prototype.toString = function() {
 // is a linear approximation of the correct integral. For this
 // reason it may be inaccurate in some cases.
 //
-DENParticle.prototype.integrate = function() {
+DENParticle.prototype.integrate = function(duration) {
     if (this.inverseMass <= 0) return;
 
-    if (arguments.length == 1) {
-        var duration = arguments[0];
+     var d = duration || 0;
 
-        if (Object.prototype.toString.call(duration).slice(8,-1).toLowerCase()
-            === "number") {
-            if (duration > 0) {
-                var scaledVel = DENVector.scale(this.velocity, duration);
+      if (duration > 0) {
+          var scaledVel = DENVector.scale(this.velocity, duration);
 
-                // Update linear position
-                this.position.add(scaledVel);
+          // Update linear position
+          this.position.add(scaledVel);
 
-                // Acceleration from the force
-                var scaledAcc = DENVector.scale(this.forceAccum, this.inverseMass);
-                var resultingAcc = DENVector.add(this.acceleration, scaledAcc);
+          // Acceleration from the force
+          var scaledAcc = DENVector.scale(this.forceAccum, this.inverseMass);
+          var resultingAcc = DENVector.add(this.acceleration, scaledAcc);
 
-                this.velocity.add(DENVector.scale(resultingAcc, duration));
-                // Impose drag
-                this.velocity.scale(Math.pow(this.damping, duration));
-                // Clear the forces
-                this.clearAccumulator();
-            }
-        }
-    }
+          this.velocity.add(DENVector.scale(resultingAcc, duration));
+          // Impose drag
+          this.velocity.scale(Math.pow(this.damping, duration));
+          // Clear the forces
+          this.clearAccumulator();
+      }
 }
 
 //

@@ -85,4 +85,12 @@ test( "DENVector Test", function() {
     v1.x = 2;
 
     ok(v4.x === 0 && v4.y === -3 && v4.z === 7, "Construction from another vector is not Reference");
+
+    v1.reset(1,2,3);
+    v2.reset(4,5,6);
+
+    var v5 = DENVector.add(v1, v2);
+
+    ok(v5.x === 5 && v5.y === 7 && v5.z === 9, "Add Two Vectors (static)");
+
 });
