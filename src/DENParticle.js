@@ -89,29 +89,31 @@ DENParticle.prototype.setAcceleration = function() {
 //
 //
 DENParticle.prototype.setDamping = function(damp) {
-    this.damping = damp;
+    this.damping = damp || 0.99;
 }
 
 //
 //
 //
 DENParticle.prototype.setInverseMass = function(invMass) {
-    this.inverseMass = invMass;
+    this.inverseMass = invMass || 1;
 }
 
 //
 //
 //
 DENParticle.prototype.setMass = function(mass) {
-    if (mass > 0) {
-        this.inverseMass = 1/mass;
+   var m = mass || 0;
+
+    if (m > 0) {
+        this.inverseMass = 1/m;
     }
 }
 
 //
 //
 //
-DENParticle.prototype.getMass = function(mass) {
+DENParticle.prototype.getMass = function() {
     if (this.inverseMass == 0) {
         return Math.MAX_VALUE;
     }

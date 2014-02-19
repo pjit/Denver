@@ -14,6 +14,10 @@ test( "DENVector Test", function() {
 
     var v2 = new DENVector(4,5,6);
 
+    var newVec = new DENVector(v2);
+
+    ok(newVec.x === 4 && newVec.y === 5 && newVec.z === 6, "Construction w/ another Vector as Argument" );
+
     v2.add(v1);
 
     ok( v2.x === 5 && v2.y === 7 && v2.z === 9, "Add Two Vectors" );

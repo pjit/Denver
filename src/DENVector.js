@@ -12,44 +12,38 @@
 // Constructor. Accepts x,y,z or an array of x,y,z i.e. [x,y,z]
 //
 //
-function DENVector() {
-    this.x = 0;
-    this.y = 0;
-    this.z = 0;
+function DENVector(x, y, z) {
+    this.x = x || 0;
+    this.y = y || 0;
+    this.z = z || 0;
 
-    // Process any arguments if passed
-    if (arguments.length > 0) {
-        if (arguments.length == 1) {
-            if (Array.isArray(arguments[0])) {
-                var arrayArg = arguments[0];
+    // Array or another vector
 
-                if (arrayArg.length == 3) {
-                    this.x = arrayArg[0];
-                    this.y = arrayArg[1];
-                    this.z = arrayArg[2];
-                }
-                else if (arrayArg.length == 2) {
-                    this.x = arrayArg[0];
-                    this.y = arrayArg[1];
-                }
-                else if (arrayArg.length == 1) {
-                    this.x = arrayArg[0];
-                }
-            }
-            else {
-                if (arguments[0] instanceof DENVector) {
-                    this.x = arguments[0].x;
-                    this.y = arguments[0].y;
-                    this.z = arguments[0].z;
-                }
-            }
-        }
-        else if (arguments.length == 3) {
-            this.x = arguments[0];
-            this.y = arguments[1];
-            this.z = arguments[2];
-        }
-    }
+   if (arguments.length == 1) {
+      if (Array.isArray(arguments[0])) {
+          var arrayArg = arguments[0];
+
+          if (arrayArg.length == 3) {
+              this.x = arrayArg[0];
+              this.y = arrayArg[1];
+              this.z = arrayArg[2];
+          }
+          else if (arrayArg.length == 2) {
+              this.x = arrayArg[0];
+              this.y = arrayArg[1];
+          }
+          else if (arrayArg.length == 1) {
+              this.x = arrayArg[0];
+          }
+      }
+      else {
+          if (arguments[0] instanceof DENVector) {
+              this.x = arguments[0].x;
+              this.y = arguments[0].y;
+              this.z = arguments[0].z;
+          }
+      }
+   }
 }
 
 //
@@ -62,15 +56,10 @@ DENVector.prototype.toString = function() {
 //
 // reset
 //
-DENVector.prototype.reset = function() {
-    if (arguments.length == 0) {
-        this.x = this.y = this.z = 0;
-    }
-    else if (arguments.length == 3) {
-        this.x = arguments[0];
-        this.y = arguments[1];
-        this.z = arguments[2];
-    }
+DENVector.prototype.reset = function(x, y, z) {
+   this.x = x || 0;
+   this.y = y || 0;
+   this.z = z || 0;
 }
 
 //
@@ -94,42 +83,44 @@ DENVector.prototype.magnitude = function() {
 // sqrt is slow on some machines an sometimes we need square only
 //
 DENVector.prototype.squareMagnitude = function() {
-    return (this.x*this.x + this.y*this.y + this.z*this.z);
+   return (this.x*this.x + this.y*this.y + this.z*this.z);
 }
 
 //
 //
 //
 DENVector.prototype.normalize = function() {
-    var n = this.magnitude();
+   var n = this.magnitude();
 
-    if (n > 0) {
-        this.x = this.x/n;
-        this.y = this.y/n;
-        this.z = this.z/n;
-    }
+   if (n > 0) {
+     this.x = this.x/n;
+     this.y = this.y/n;
+     this.z = this.z/n;
+   }
 }
 
 //
 // Multiply by scalar
 //
-DENVector.prototype.multiply = function() {
-    if (arguments.length === 1) {
-        this.x *= arguments[0];
-        this.y *= arguments[0];
-        this.z *= arguments[0];
-    }
+DENVector.prototype.multiply = function(scalarValue) {
+   var s = scalarValue || 1;
+
+   this.x *= s;
+   this.y *= s;
+   this.z *= s;
 }
 
 //
 //
 //
-DENVector.prototype.add = function() {
-    if (arguments.length == 1) {
-        this.x += (arguments[0].x || 0);
-        this.y += (arguments[0].y || 0);
-        this.z += (arguments[0].z || 0);
-    }
+DENVector.prototype.add = function(vector) {
+   var v = vector || {};
+
+   if (v instanceof DENVector) {
+      this.x += v.x;
+      this.y += v.y;
+      this.z += v.z;
+   }
 }
 
 //
@@ -138,8 +129,8 @@ DENVector.prototype.add = function() {
 //
 //
 //
-DENVector.prototype.scale = function() {
-    this.multiply(arguments[0] || 1);
+DENVector.prototype.scale = function(scaleFactor) {
+    this.multiply(scaleFactor || 1);
 }
 
 //
@@ -199,13 +190,15 @@ DENVector.vectorProduct = function(vector1, vector2) {
 //
 //
 //
-DENVector.normal = function() {
-    if (arguments.length == 1) {
-        var v = new DENVector(arguments[0].x || 0, arguments[0].y || 0, arguments[0].z || 0);
+DENVector.normal = function(vector) {
+   var v = vector || {};
 
-        v.normalize();
+    if (v instanceof DENVector) {
+        var normalVec = new DENVector(v);
 
-        return v;
+        normalVec.normalize();
+
+        return normalVec;
     }
 }
 
