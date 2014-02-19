@@ -12,7 +12,9 @@
 //
 
 var DENParticleForceRegistry = (function() {
-    // Keeps track of one force generator and the particle it
+   "use strict";
+
+   // Keeps track of one force generator and the particle it
     // applies to.
     var registrations = [];
 
