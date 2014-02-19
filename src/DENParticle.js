@@ -42,8 +42,8 @@ DENParticle.prototype.setProperty = function(propertyName, value) {
    'use strict';
 
    if (value.length === 1) {
-       if (Array.isArray(value)) {
-           var arrayArg = value;
+       if (Array.isArray(value[0])) {
+           var arrayArg = value[0];
 
            if (arrayArg.length >= 3) {
                this[propertyName] = new DENVector(arrayArg[0], arrayArg[1], arrayArg[2]);
@@ -56,8 +56,8 @@ DENParticle.prototype.setProperty = function(propertyName, value) {
            }
        }
        else {
-           if (value instanceof DENVector) { // vector ??
-               this[propertyName] = new DENVector(value);
+           if (value[0] instanceof DENVector) { // vector ??
+               this[propertyName] = new DENVector(value[0]);
            }
        }
    }
