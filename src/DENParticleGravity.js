@@ -6,66 +6,67 @@
  * To change this template use File | Settings | File Templates.
  */
 
-"use strict";
+//
+//
+//
+function DENParticleGravity(x, y, z) {
+   'use strict';
 
-//
-//
-//
-function DENParticleGravity() {
-    // Holds the acceleration due to gravity.
-    this.gravity = new DENVector(0,0,0);
-    // Process any arguments if passed
-    if (arguments.length > 0) {
-        if (arguments.length == 1) {
-            if (Array.isArray(arguments[0])) {
-                var arrayArg = arguments[0];
+   // Holds the acceleration due to gravity.
+   this.gravity = new DENVector(0,-10,0);
+   // Process any arguments if passed
+   if (arguments.length === 1) {
+      if (Array.isArray(x)) {
+         var arrayArg = x;
 
-                if (arrayArg.length == 3) {
-                    this.gravity.x = arrayArg[0];
-                    this.gravity.y = arrayArg[1];
-                    this.gravity.z = arrayArg[2];
-                }
-                else if (arrayArg.length == 2) {
-                    this.gravity.x = arrayArg[0];
-                    this.gravity.y = arrayArg[1];
-                }
-                else if (arrayArg.length == 1) {
-                    this.gravity.x = arrayArg[0];
-                }
-            }
-            else {
-                if (arguments[0] instanceof DENVector) {
-                    this.gravity = arguments[0];
-                }
-            }
-        }
-        else if (arguments.length == 3) {
-            this.gravity.x = arguments[0];
-            this.gravity.y = arguments[1];
-            this.gravity.z = arguments[2];
-        }
-    }
+         if (arrayArg.length === 3) {
+            this.gravity.x = x[0];
+            this.gravity.y = x[1];
+            this.gravity.z = x[2];
+         }
+         else if (arrayArg.length === 2) {
+            this.gravity.x = x[0];
+            this.gravity.y = x[1];
+         }
+         else if (arrayArg.length === 1) {
+            this.gravity.x = x[0];
+         }
+      }
+      else {
+         if (x instanceof DENVector) {
+            this.gravity = new DENVector(x);
+         }
+      }
+   }
+   else if (arguments.length === 3) {
+      this.gravity = new DENVector(x, y, z);
+   }
 }
 
 //
 //
 //
 DENParticleGravity.prototype.updateForce = function(particle, duration) {
-   var p = particle || {};
+   'use strict';
 
-    if (p instanceof DENParticle) {
-        if (p.hasFiniteMass()) {
-            var newForce = DENVector.scale(this.gravity, p.getMass());
+   var p = particle || {},
+      newForce = {};
 
-            p.addForce(newForce);
-        }
-    }
-}
+   if (p instanceof DENParticle) {
+      if (p.hasFiniteMass()) {
+         newForce = DENVector.scale(this.gravity, p.getMass());
+
+         p.addForce(newForce);
+      }
+   }
+};
 
 //
 //
 //
 DENParticleGravity.prototype.toString = function() {
-    return "Gravity Vector: " + this.gravity.toString();
-}
+   'use strict';
+
+   return "Gravity Vector: " + this.gravity.toString();
+};
 
