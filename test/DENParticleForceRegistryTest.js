@@ -13,9 +13,9 @@ test( "DENParticleForceRegistry Test", function() {
    p1.setPosition(1, 2, 3);
    p1.setMass(2);
    DENParticleForceRegistry.add(p1, fgravity);
-   ok(DENParticleForceRegistry.getRegistrationCount() === 1, "Added 1 Particle-Force Mapping");
+   ok(DENParticleForceRegistry.getRegistrationCount() === 1, "Added 1st Particle-Force Mapping");
    DENParticleForceRegistry.remove(p1, fgravity);
-   ok(DENParticleForceRegistry.getRegistrationCount() === 0, "Removed 1 Particle-Force Mapping");
+   ok(DENParticleForceRegistry.getRegistrationCount() === 0, "Removed 1st Particle-Force Mapping");
    // Add again for testing
    DENParticleForceRegistry.add(p1, fgravity);
    DENParticleForceRegistry.updateForces(4);
@@ -41,10 +41,26 @@ test( "DENParticleForceRegistry Test", function() {
    p1.clearAccumulator();
    // add gravity force back
    DENParticleForceRegistry.add(p1, fgravity);
-   ok(DENParticleForceRegistry.getRegistrationCount() === 2, "Added 2 Particle-Force Mapping");
+   ok(DENParticleForceRegistry.getRegistrationCount() === 2, "Added 2nd Particle-Force Mapping");
    DENParticleForceRegistry.updateForces(4);
    ok(p1.forceAccum.x === -9.92820323027551 &&
       p1.forceAccum.y === -29.528203230275512 &&
       p1.forceAccum.z === -9.92820323027551, "Force Accumulated due to drag & gravity " + p1.forceAccum.toString());
+
+   // create another particle for Spring force
+   var pA = new DENParticle();
+   var pB = new DENParticle();
+
+   pA.setPosition(1, 2, 3);
+   pA.setMass(2);
+
+   pB.setPosition(4, 5, 6);
+   pB.setMass(5);
+
+   var springForce = new DENParticleSpring(pB, 1, 2);
+
+   DENParticleForceRegistry.add(pA, springForce);
+   DENParticleForceRegistry.updateForces(1);
+   ok(DENParticleForceRegistry.getRegistrationCount() === 3, "Added 3rd Particle-Force Mapping");
 });
 
