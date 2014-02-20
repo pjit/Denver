@@ -241,8 +241,8 @@ DENVector.scale = function(vector, scaleFactor) {
     if (v instanceof  DENVector) {
        scaledVec.reset(v.x, v.y, v.z);
 
-       v.multiply(s);
+       scaledVec.multiply(s);
 
-       return v;
+       return scaledVec;
     }
 };

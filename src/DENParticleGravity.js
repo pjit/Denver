@@ -34,12 +34,16 @@ function DENParticleGravity(x, y, z) {
       }
       else {
          if (x instanceof DENVector) {
-            this.gravity = new DENVector(x);
+            this.gravity.x = x.x;
+            this.gravity.y = x.y;
+            this.gravity.z = x.z;
          }
       }
    }
    else if (arguments.length === 3) {
-      this.gravity = new DENVector(x, y, z);
+      this.gravity.x = x;
+      this.gravity.y = y;
+      this.gravity.z = z;
    }
 }
 
