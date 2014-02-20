@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98615448-6be4-4f8f-9e38-2afcc2ee24a1" name="Default" comment="">
+    <list default="true" id="98615448-6be4-4f8f-9e38-2afcc2ee24a1" name="Default" comment="Spring Force">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/DENParticleForceRegistryTest.js" afterPath="$PROJECT_DIR$/test/DENParticleForceRegistryTest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/DENTest.html" afterPath="$PROJECT_DIR$/test/DENTest.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Denver.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392864594717" ignored="false" />
+    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392868160894" ignored="false" />
     <file path="/DENVector.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392864323317" ignored="false" />
     <file path="/TestDebug.html" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391366476128" ignored="false" />
     <file path="/DENParticle.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392776637632" ignored="false" />
@@ -17,7 +16,7 @@
     <file path="/DENParticleTest.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392776891986" ignored="false" />
     <file path="/DENParticleForceRegistry.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392692170683" ignored="false" />
     <file path="/DENParticleGravity.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392861291559" ignored="false" />
-    <file path="/DENParticleForceRegistryTest.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392866720674" ignored="false" />
+    <file path="/DENParticleForceRegistryTest.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392868962154" ignored="false" />
     <file path="/a.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392777671834" ignored="false" />
     <file path="/DENParticleGravityTest.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392778490014" ignored="false" />
     <file path="/simran.html" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392839528020" ignored="false" />
@@ -67,7 +66,7 @@
       <file leaf-file-name="DENParticleForceRegistryTest.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/DENParticleForceRegistryTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="63" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.45595855">
+            <state line="79" column="92" selection-start="3281" selection-end="3281" vertical-scroll-proportion="3.0699482">
               <folding />
             </state>
           </provider>
@@ -114,7 +113,7 @@
       <file leaf-file-name="DENParticleSpring.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DENParticleSpring.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="26" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0">
+            <state line="28" column="53" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -200,8 +199,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="230" />
-    <option name="y" value="28" />
+    <option name="x" value="167" />
+    <option name="y" value="37" />
     <option name="width" value="1473" />
     <option name="height" value="801" />
   </component>
@@ -509,7 +508,11 @@
       <created>1392864600397</created>
       <updated>1392864600397</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Spring Force">
+      <created>1392867166678</created>
+      <updated>1392867166678</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -533,7 +536,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="230" y="28" width="1473" height="801" extended-state="0" />
+    <frame x="167" y="37" width="1473" height="801" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -597,7 +600,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Drag Force" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Force" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -629,6 +632,7 @@
     <MESSAGE value="DENParticle - Test coverage" />
     <MESSAGE value="More files jlinted" />
     <MESSAGE value="Drag Force" />
+    <MESSAGE value="Spring Force" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -738,7 +742,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DENParticleSpring.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="26" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0">
+        <state line="28" column="53" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -747,7 +751,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/DENParticleForceRegistryTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="63" selection-start="2247" selection-end="2247" vertical-scroll-proportion="0.45595855">
+        <state line="79" column="92" selection-start="3281" selection-end="3281" vertical-scroll-proportion="3.0699482">
           <folding />
         </state>
       </provider>
