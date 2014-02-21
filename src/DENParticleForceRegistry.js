@@ -29,8 +29,8 @@ var DENParticleForceRegistry = (function() {
            for (var i = 0; i < registrations.length; ++i) {
               var particleForceObj = registrations[i];
 
-              if (particleForceObj.ForceGenerator == forcegenerator
-                 && particleForceObj.Particle == particle) {
+              if (particleForceObj.ForceGenerator == forcegenerator &&
+                  particleForceObj.Particle == particle) {
                   registrations.splice(i, 1);
                   break;
               }

@@ -27,12 +27,6 @@ test( "DENParticle Test", function() {
     ok(p1.velocity.x === 5 && p1.velocity.y === 6 && p1.velocity.z === 7, "Set Velocity Vector");
     p1.setAcceleration(acc);
     ok(p1.acceleration.x === 0 && p1.acceleration.y === -9.8 && p1.acceleration.z === -2, "Set Acceleration Vector");
-    p1.setPosition([9,8,7]);
-    ok(p1.position.x === 9 && p1.position.y === 8 && p1.position.z === 7, "Set Position Array");
-    p1.setVelocity([12,13,-14]);
-    ok(p1.velocity.x === 12 && p1.velocity.y === 13 && p1.velocity.z === -14, "Set Velocity Array");
-    p1.setAcceleration([-10,-20,-30]);
-    ok(p1.acceleration.x === -10 && p1.acceleration.y === -20 && p1.acceleration.z === -30, "Set Acceleration Array");
     p1.setPosition(2,4,6);
     ok(p1.position.x === 2 && p1.position.y === 4 && p1.position.z === 6, "Set Position Values");
     p1.setVelocity(1,3,-4);

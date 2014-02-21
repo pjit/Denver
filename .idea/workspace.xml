@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98615448-6be4-4f8f-9e38-2afcc2ee24a1" name="Default" comment="Spring Force">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/DENParticleForceRegistryTest.js" afterPath="$PROJECT_DIR$/test/DENParticleForceRegistryTest.js" />
+    <list default="true" id="98615448-6be4-4f8f-9e38-2afcc2ee24a1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DENParticleDrag.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/DENParticleDragTest.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DENParticleSpring.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/DENParticleSpringTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DENParticle.js" afterPath="$PROJECT_DIR$/src/DENParticle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DENParticleForceRegistry.js" afterPath="$PROJECT_DIR$/src/DENParticleForceRegistry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/DENParticleTest.js" afterPath="$PROJECT_DIR$/test/DENParticleTest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DENVector.js" afterPath="$PROJECT_DIR$/src/DENVector.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Denver.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392868160894" ignored="false" />
-    <file path="/DENVector.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392864323317" ignored="false" />
+    <file path="/Dummy.txt" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392944245921" ignored="false" />
+    <file path="/DENVector.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392942748235" ignored="false" />
     <file path="/TestDebug.html" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1391366476128" ignored="false" />
-    <file path="/DENParticle.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392776637632" ignored="false" />
+    <file path="/DENParticle.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392943963234" ignored="false" />
     <file path="/DENTest.html" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392866931268" ignored="false" />
     <file path="/DENVectorTest.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392771932604" ignored="false" />
     <file path="/DENParticleTest.js" changelist="98615448-6be4-4f8f-9e38-2afcc2ee24a1" time="1392776891986" ignored="false" />
@@ -63,19 +70,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DENParticleForceRegistryTest.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DENParticleForceRegistryTest.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/DENParticleForceRegistryTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="92" selection-start="3281" selection-end="3281" vertical-scroll-proportion="3.0699482">
+            <state line="26" column="55" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DENParticleGravityTest.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/DENParticleGravityTest.js">
+      <file leaf-file-name="DENVector.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DENVector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="160" selection-end="779" vertical-scroll-proportion="0.0">
+            <state line="164" column="33" selection-start="2482" selection-end="2482" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DENVectorTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/DENVectorTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,16 +100,7 @@
       <file leaf-file-name="DENParticleForceRegistry.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DENParticleForceRegistry.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DENParticleGravity.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DENParticleGravity.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="0" selection-start="1444" selection-end="1444" vertical-scroll-proportion="0.0">
+            <state line="37" column="64" selection-start="1094" selection-end="1094" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,10 +109,8 @@
       <file leaf-file-name="DENParticleDrag.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DENParticleDrag.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="47" selection-start="0" selection-end="933" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc;n#DENParticleDrag#0" expanded="false" />
-              </folding>
+            <state line="23" column="59" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,26 +119,24 @@
         <entry file="file://$PROJECT_DIR$/src/DENParticleSpring.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="28" column="53" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DENParticle.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="0" selection-start="2567" selection-end="2567" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DENTest.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/DENTest.html">
+      <file leaf-file-name="DENParticle.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="26" selection-start="1560" selection-end="1560" vertical-scroll-proportion="-11.958333">
+            <state line="100" column="33" selection-start="2513" selection-end="2513" vertical-scroll-proportion="0.6130536">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DENParticleTest.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/DENParticleTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="4" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,9 +146,7 @@
         <entry file="file://$PROJECT_DIR$/test/DENParticleDragTest.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="14" column="0" selection-start="0" selection-end="400" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#158#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -179,30 +180,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/DENParticleForceRegistry.js" />
-        <option value="$PROJECT_DIR$/src/DENParticle.js" />
-        <option value="$PROJECT_DIR$/test/DENParticleTest.js" />
         <option value="$PROJECT_DIR$/test/DENVectorTest.js" />
         <option value="$PROJECT_DIR$/test/DENParticleGravityTest.js" />
         <option value="$PROJECT_DIR$/../../simran/WebDev/Hello/simran.html" />
         <option value="$PROJECT_DIR$/src/DENParticleGravity.js" />
         <option value="$PROJECT_DIR$/src/DENDragForce.js" />
         <option value="$PROJECT_DIR$/test/DENParticleDragTest.js" />
-        <option value="$PROJECT_DIR$/src/DENVector.js" />
         <option value="$PROJECT_DIR$/src/DENParticleDrag.js" />
         <option value="$PROJECT_DIR$/src/DENParticleSpring.js" />
         <option value="$PROJECT_DIR$/test/DENTest.html" />
         <option value="$PROJECT_DIR$/test/DENParticleSpring.js" />
         <option value="$PROJECT_DIR$/test/DENParticleSpringTest.js" />
         <option value="$PROJECT_DIR$/test/DENParticleForceRegistryTest.js" />
+        <option value="$PROJECT_DIR$/src/DENVector.js" />
+        <option value="$PROJECT_DIR$/test/DENParticleTest.js" />
+        <option value="$PROJECT_DIR$/src/DENParticle.js" />
+        <option value="$PROJECT_DIR$/src/DENParticleForceRegistry.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="167" />
     <option name="y" value="37" />
-    <option name="width" value="1473" />
-    <option name="height" value="801" />
+    <option name="width" value="1335" />
+    <option name="height" value="833" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -230,6 +230,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,32 +276,9 @@
               <option name="myItemId" value="Denver" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Denver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Denver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qunit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -512,7 +490,11 @@
       <created>1392867166678</created>
       <updated>1392867166678</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Spring Force tests">
+      <created>1392869131103</created>
+      <updated>1392869131103</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -536,15 +518,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="167" y="37" width="1473" height="801" extended-state="0" />
+    <frame x="0" y="37" width="1335" height="833" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31778425" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286119" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18413793" sideWeight="0.64170337" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35829663" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19817074" sideWeight="0.67132866" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34125873" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -600,7 +582,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spring Force" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hinted and Linted. DENParticle changes." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -633,32 +615,18 @@
     <MESSAGE value="More files jlinted" />
     <MESSAGE value="Drag Force" />
     <MESSAGE value="Spring Force" />
+    <MESSAGE value="Spring Force tests" />
+    <MESSAGE value="Hinted and Linted. DENParticle changes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="19" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/DENVectorTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/DENParticleTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../bocoup-training-js-best-practices/best_practices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3213" column="32" selection-start="85021" selection-end="85030" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3213" column="32" selection-start="85021" selection-end="85030" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../simran/WebDev/Hello/simran.html">
@@ -673,22 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DENVector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="245" column="23" selection-start="4113" selection-end="4113" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DENParticleDrag.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="47" selection-start="0" selection-end="933" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc;n#DENParticleDrag#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DENParticleGravity.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="0" selection-start="1444" selection-end="1444" vertical-scroll-proportion="0.0">
@@ -696,30 +648,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DENParticleForceRegistry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1576" selection-end="1576" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="0" selection-start="2567" selection-end="2567" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/include/qunit/qunit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1463" column="0" selection-start="39402" selection-end="39402" vertical-scroll-proportion="0.3324397">
-          <folding />
-        </state>
+        <state line="1463" column="0" selection-start="39402" selection-end="39402" vertical-scroll-proportion="0.3324397" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/DENTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="26" selection-start="1560" selection-end="1560" vertical-scroll-proportion="-11.958333">
+        <state line="40" column="26" selection-start="1560" selection-end="1560" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -727,9 +663,7 @@
     <entry file="file://$PROJECT_DIR$/test/DENParticleDragTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="0" selection-end="400" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#158#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -743,15 +677,55 @@
     <entry file="file://$PROJECT_DIR$/src/DENParticleSpring.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="53" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/DENVectorTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DENVector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="33" selection-start="2482" selection-end="2482" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/DENParticleTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="4" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/DENParticleForceRegistryTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="92" selection-start="3281" selection-end="3281" vertical-scroll-proportion="3.0699482">
+        <state line="26" column="55" selection-start="1042" selection-end="1042" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DENParticleForceRegistry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="64" selection-start="1094" selection-end="1094" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DENParticleDrag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="59" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DENParticle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="33" selection-start="2513" selection-end="2513" vertical-scroll-proportion="0.6130536">
           <folding />
         </state>
       </provider>

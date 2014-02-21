@@ -38,61 +38,53 @@ function DENParticle() {
 //
 //
 //
-DENParticle.prototype.setProperty = function(propertyName, value) {
+DENParticle.prototype.setProperty = function(propertyName, v) {
    'use strict';
 
-   if (value.length === 1) {
-       if (Array.isArray(value[0])) {
-           var arrayArg = value[0];
+    this[propertyName].x = v.x;
+    this[propertyName].y = v.y;
+    this[propertyName].z = v.z;
+};
 
-           if (arrayArg.length >= 3) {
-               this[propertyName] = new DENVector(arrayArg[0], arrayArg[1], arrayArg[2]);
-           }
-           else if (arrayArg.length === 2) {
-               this[propertyName] = new DENVector(arrayArg[0], arrayArg[1], 0);
-           }
-           else if (arrayArg.length === 1) {
-               this[propertyName] = new DENVector(arrayArg[0], 0, 0);
-           }
-       }
-       else {
-           if (value[0] instanceof DENVector) { // vector ??
-               this[propertyName] = new DENVector(value[0]);
-           }
-       }
+//
+//
+//
+DENParticle.createDENVector = function(x, y, z) {
+   'use strict';
+
+    // Try a vector first
+   if (x instanceof DENVector) {
+      return x;
    }
-   else if (value.length === 3) {
-       this[propertyName].x = value[0];
-       this[propertyName].y = value[1];
-       this[propertyName].z = value[2];
-   }
+
+   return new DENVector(x || 0, y || 0, z || 0);
 };
 
 //
 //
 //
-DENParticle.prototype.setPosition = function() {
+DENParticle.prototype.setPosition = function(x, y, z) {
    'use strict';
 
-   this.setProperty("position", arguments);
+   this.setProperty("position", DENParticle.createDENVector(x, y, z));
 };
 
 //
 //
 //
-DENParticle.prototype.setVelocity = function() {
+DENParticle.prototype.setVelocity = function(x, y, z) {
    'use strict';
 
-   this.setProperty("velocity", arguments);
+   this.setProperty("velocity", DENParticle.createDENVector(x, y, z));
 };
 
 //
 //
 //
-DENParticle.prototype.setAcceleration = function() {
+DENParticle.prototype.setAcceleration = function(x, y, z) {
    'use strict';
 
-   this.setProperty("acceleration", arguments);
+   this.setProperty("acceleration", DENParticle.createDENVector(x, y, z));
 };
 
 //
@@ -154,11 +146,7 @@ DENParticle.prototype.hasFiniteMass = function() {
 DENParticle.prototype.addForce = function(force) {
    'use strict';
 
-   var f = force || {};
-
-   if (f instanceof  DENVector) {
-       this.forceAccum.add(f);
-   }
+    this.forceAccum.add(force);
 };
 
 //
@@ -167,12 +155,12 @@ DENParticle.prototype.addForce = function(force) {
 DENParticle.prototype.toString = function() {
    'use strict';
 
-   return "position: " + this.position.toString()
-     + " velocity: " + this.velocity.toString()
-     + " acceleration: " + this.acceleration.toString()
-     + " damping: " + this.damping.toString()
-     + " inverseMass: " + this.inverseMass.toString()
-     + " Accumulated force: " + this.forceAccum.toString();
+   return "position: " + this.position.toString() +
+     " velocity: " + this.velocity.toString() +
+     " acceleration: " + this.acceleration.toString() +
+     " damping: " + this.damping.toString() +
+     " inverseMass: " + this.inverseMass.toString() +
+     " Accumulated force: " + this.forceAccum.toString();
 };
 
 //
