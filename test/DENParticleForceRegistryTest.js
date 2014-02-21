@@ -73,10 +73,22 @@ test( "DENParticleForceRegistry Test", function() {
    var springForceB = new DENParticleSpring(pA, 1, 2);
 
    DENParticleForceRegistry.add(pB, springForceB);
+   ok(DENParticleForceRegistry.getRegistrationCount() === 4, "Added 4th Particle-Force Mapping");
    DENParticleForceRegistry.updateForces(1);
    ok(pB.forceAccum.x === -1.9710084891449469 &&
       pB.forceAccum.y === -1.9710084891449469 &&
       pB.forceAccum.z === -2.628011318859929,
       "Spring Force Accumulated on Particle B (receiving end) " + pB.forceAccum.toString());
+
+   var anchor = new DENVector(10, 20, 30);
+   var anchoredSpring = new DENParticleAnchoredSpring(anchor, 1, 2);
+
+   DENParticleForceRegistry.add(pA, anchoredSpring);
+   ok(DENParticleForceRegistry.getRegistrationCount() === 5, "Added 5th Particle-Force Mapping");
+   DENParticleForceRegistry.updateForces(1);
+   ok(pA.forceAccum.x === 13.627864621774163 &&
+      pA.forceAccum.y === 22.093342137949314 &&
+      pA.forceAccum.z === 28.838023952258126,
+      "Anchored Spring Force Accumulated on Particle A" + pA.forceAccum.toString());
 });
 
