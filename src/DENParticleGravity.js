@@ -22,15 +22,12 @@ function DENParticleGravity(x, y, z) {
 DENParticleGravity.prototype.updateForce = function(particle, duration) {
    'use strict';
 
-   var p = particle || {},
-      newForce = {};
+   var newForce = {};
 
-   if (p instanceof DENParticle) {
-      if (p.hasFiniteMass()) {
-         newForce = DENVector.scale(this.gravity, p.getMass());
+   if (particle.hasFiniteMass()) {
+      newForce = DENVector.scale(this.gravity, particle.getMass());
 
-         p.addForce(newForce);
-      }
+      particle.addForce(newForce);
    }
 };
 

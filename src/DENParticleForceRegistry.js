@@ -38,7 +38,7 @@ var DENParticleForceRegistry = (function() {
        },
        // Clears all registrations from the registry.
        clear : function() {
-            registrations.clear();
+            registrations.length = 0;
        },
        // Calls all the force generators to update the forces of their
        // corresponding particles.

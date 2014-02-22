@@ -196,3 +196,14 @@ DENVector.scale = function(vector, scaleFactor) {
 
     return scaledVec;
 };
+
+//
+//
+//
+DENVector.subtract = function(vector1, vector2) {
+  'use strict';
+
+   return new DENVector(vector1.x - vector2.x,
+                        vector1.y - vector2.y,
+                        vector1.z - vector2.z);
+};

@@ -30,13 +30,7 @@ function DENParticleAnchoredSpring(anchorLocation, springConstant, restLength) {
 DENParticleAnchoredSpring.prototype.updateForce = function(particle, duration) {
    'use strict';
 
-   var force = new DENVector(particle.position);
-
-   // Add method in DENVector for this
-   force.x = force.x - this.anchorLocation.x;
-   force.y = force.y - this.anchorLocation.y;
-   force.z = force.z - this.anchorLocation.z;
-
+   var force = new DENVector.subtract(particle.position, this.anchorLocation);
    var magnitude = force.magnitude();
 
    magnitude = Math.abs(magnitude - this.restLength);
