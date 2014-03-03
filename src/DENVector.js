@@ -30,104 +30,78 @@ function DENVector(x, y, z) {
 }
 
 //
+// DENVector Prototype
 //
-//
-DENVector.prototype.toString = function() {
-   'use strict';
+DENVector.prototype = {
+   toString : function() {
+      'use strict';
 
-   return "(" + this.x + ", " + this.y + ", " + this.z + ")";
-};
+      return "(" + this.x + ", " + this.y + ", " + this.z + ")";
+   },
+   // reset
+   reset : function(x, y, z) {
+      'use strict';
 
-//
-// reset
-//
-DENVector.prototype.reset = function(x, y, z) {
-   'use strict';
+      this.x = x || 0;
+      this.y = y || 0;
+      this.z = z || 0;
+   },
+   // invert
+   invert : function() {
+      'use strict';
 
-   this.x = x || 0;
-   this.y = y || 0;
-   this.z = z || 0;
-};
+      this.x = -this.x;
+      this.y = -this.y;
+      this.z = -this.z;
+   },
+   // Magnitude of the vector
+   magnitude : function() {
+      'use strict';
 
-//
-// Invert
-//
-//
-DENVector.prototype.invert = function() {
-   'use strict';
+      return Math.sqrt(this.squareMagnitude());
+   },
+   // sqrt is slow on some machines an sometimes we need square only
+   squareMagnitude : function() {
+      'use strict';
 
-   this.x = -this.x;
-   this.y = -this.y;
-   this.z = -this.z;
-};
+      return (this.x*this.x + this.y*this.y + this.z*this.z);
+   },
+   // normalize
+   normalize : function() {
+      'use strict';
 
-//
-// Magnitude of the vector
-//
-DENVector.prototype.magnitude = function() {
-   'use strict';
+      var n = this.magnitude();
 
-    return Math.sqrt(this.squareMagnitude());
-};
+      if (n > 0) {
+         this.x = this.x/n;
+         this.y = this.y/n;
+         this.z = this.z/n;
+      }
+   },
+   // Multiply by scalar
+   multiply : function(scalarValue) {
+      'use strict';
 
-//
-// sqrt is slow on some machines an sometimes we need square only
-//
-DENVector.prototype.squareMagnitude = function() {
-   'use strict';
+      var s = scalarValue || 1;
 
-   return (this.x*this.x + this.y*this.y + this.z*this.z);
-};
+      this.x *= s;
+      this.y *= s;
+      this.z *= s;
+   },
+   // Add vector to a vector
+   add : function(vector) {
+      'use strict';
 
-//
-//
-//
-DENVector.prototype.normalize = function() {
-   'use strict';
+      this.x += vector.x;
+      this.y += vector.y;
+      this.z += vector.z;
+   },
+   // Scale a vector
+   scale : function(scaleFactor) {
+      'use strict';
 
-   var n = this.magnitude();
-
-   if (n > 0) {
-     this.x = this.x/n;
-     this.y = this.y/n;
-     this.z = this.z/n;
+      this.multiply(scaleFactor || 1);
    }
-};
-
-//
-// Multiply by scalar
-//
-DENVector.prototype.multiply = function(scalarValue) {
-   'use strict';
-
-   var s = scalarValue || 1;
-
-   this.x *= s;
-   this.y *= s;
-   this.z *= s;
-};
-
-//
-//
-//
-DENVector.prototype.add = function(vector) {
-   'use strict';
-
-   this.x += vector.x;
-   this.y += vector.y;
-   this.z += vector.z;
-};
-
-//
-//
-//
-//
-//
-//
-DENVector.prototype.scale = function(scaleFactor) {
-   'use strict';
-
-   this.multiply(scaleFactor || 1);
 };
 
 //
