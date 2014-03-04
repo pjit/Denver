@@ -13,10 +13,9 @@ function DENSprite(name, painter, behaviors) {
    if (name !== undefined) this.name = name;
    if (painter !== undefined) this.painter = painter;
 
-   this.position = new DENVector();
+   // The following attributes are sprite specific
    this.width = 10;
    this.height = 10;
-   this.velocity = new DENVector();
    this.visible = true;
    this.animating = false;
    this.behaviours = behaviors || [];
@@ -36,8 +35,13 @@ DENSprite.prototype = {
          this.behaviours[i].execute(this, context, time);
       }
    },
-   setPosition: function(x, y) {
-      this.position.x = x || this.position.x;
-      this.position.y = y || this.position.y;
+   setParticle : function(particle) {
+      this.particle = particle;
+   },
+   position : function() {
+      if (this.particle !== undefined) {
+         return this.particle.position;
+      }
+      return new DENVector();
    }
 };

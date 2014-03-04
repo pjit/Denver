@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Denver, ijk</title>
+    <style>
+        body {
+            background: #dddddd;
+        }
+        #canvas {
+            margin: 10px;
+            padding: 10px;
+            background: #ffffff;
+            border: thin inset #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+    <canvas id='canvas' width ='600' height='300'>
+        Canvas not supported.
+    </canvas>
+    <script src="/usr/local/include/jquery/jquery.js"></script>
+    <script src="../src/DENSprite.js"></script>
+    <script src="../src/DENVector.js"></script>
+    <script src="../src/DENParticle.js"></script>
+    <script src="../src/DENParticleGravity.js"></script>
+    <script src="../src/DENParticleAnchoredSpring.js"></script>
+    <script src="../src/DENParticleDrag.js"></script>
+    <script src="../src/DENParticleBuoyancy.js"></script>
+    <script src="../src/DENParticleForceRegistry.js"></script>
+    <script>
+        var canvasObj = $("#canvas")[0],
+                canvasContext = canvasObj.getContext('2d');
+
+        var radius = 50,
+            ball = new DENSprite('ball',
+                    {
+                       paint : function(sprite, context) {
+                           context.save();
+                           context.beginPath();
+                           context.arc(sprite.position().x + sprite.width/2,
+                                sprite.position().y + sprite.height/2,
+                                    radius, 0, Math.PI*2, false);
+                           context.clip();
+                           context.shadowColor = 'rgb(0,0,0)';
+                           context.shadowOffsetX = -4;
+                           context.shadowOffsetY = -4;
+                           context.shadowBlur = 8;
+                           context.lineWidth = 1;
+                           context.strokeStyle = 'rgb(100,100,195)';
+                           context.fillStyle = 'rgba(30,144,255,0.15)';
+                           context.fill();
+                           context.stroke();
+                           context.restore();
+                       }
+                    });
+        // create particle
+        var p1 = new DENParticle();
+        var fgravity = new DENParticleGravity(0, -9.8, 0);
+
+        p1.setPosition(80, 60, 0);
+        p1.setMass(50);
+        p1.setVelocity(0, 0, 0)
+
+       // DENParticleForceRegistry.add(p1, fgravity);
+        //p1.integrate(4);
+
+        var anchor = new DENVector(80, 60, 0);
+        var anchoredSpring = new DENParticleAnchoredSpring(anchor, 1, 2);
+        var d1 = new DENParticleDrag(3, 4);
+        var buonyancyForce = new DENParticleBuoyancy(10, 30, 20, 1000);
+
+        DENParticleForceRegistry.add(p1, buonyancyForce);
+        //DENParticleForceRegistry.add(p1, anchoredSpring);
+        // DENParticleForceRegistry.add(p1, d1);
+        ball.setParticle(p1);
+        var evenOdd = true;
+
+        function updateParticle(time) {
+            if (evenOdd) {
+                canvasContext.clearRect(0, 0, canvasObj.width, canvasObj.height);
+                ball.paint(canvasContext);
+                DENParticleForceRegistry.updateForces(.5);
+                p1.integrate(.5);
+                if (ball.position().y > 300) {
+                    p1.position.reset(80, 60, 0);
+                    p1.clearAccumulator();
+                }
+//                if (ball.position().y < 20) {
+//                    p1.position.reset(80, 60, 0);
+//                    p1.clearAccumulator();
+//                    console.log(p1);
+//                }
+                //evenOdd = false;
+            }
+            else {
+                evenOdd = true;
+            }
+            window.requestAnimationFrame(updateParticle);
+        }
+        window.requestAnimationFrame(updateParticle);
+        //ball.paint(canvasContext);
+        /*
+        var imagePainter = function(imageLocation) {
+            this.image = new Image();
+            this.image.src = imageLocation;
+        }
+
+        imagePainter.prototype =  {
+            paint : function(sprite, context) {
+                if (this.image.complete) {
+                    context.save();
+                    context.drawImage(this.image, sprite.position.x, sprite.position.y,
+                            sprite.width, sprite.height);
+                    context.restore();
+                }
+            }
+        };
+
+        var imgBall = new DENSprite('imgBall', new imagePainter('../images/sampleimg.png'));
+
+        imgBall.setPosition(100, 100);
+        imgBall.paint(canvasContext);
+
+        var SpriteSheetPainter = function(cells) {
+            this.cells = cells || [];
+            this.cellIndex = 0;
+        };
+        SpriteSheetPainter.prototype = {
+            advance : function() {
+                if (this.cellIndex == this.cells.length - 1) {
+                    this.cellIndex = 0;
+                }
+                else {
+                    this.cellIndex++;
+                }
+            },
+            paint : function(sprite, context) {
+                var cell = this.cells[this.cellIndex];
+                context.drawImage(spriteSheet, cell.left, cell.top, cell.width, cell.height,
+                        sprite.position.x, sprite.position.y, cell.width, cell.height);
+            }
+        };
+
+        var spriteSheet = new Image(),
+                runnerCells = [
+                    {left: 0, top: 0, width: 47, height: 64},
+                    {left: 55, top: 0, width: 44, height: 64},
+                    {left: 107, top: 0, width: 39, height: 64},
+                    {left: 150, top: 0, width: 46, height: 64},
+                    {left: 208, top: 0, width: 49, height: 64},
+                    {left: 265, top: 0, width: 46, height: 64},
+                    {left: 320, top: 0, width: 42, height: 64},
+                    {left: 380, top: 0, width: 35, height: 64},
+                    {left: 425, top: 0, width: 35, height: 64}
+                ],
+                animationSprite = new DENSprite('runner', new SpriteSheetPainter(runnerCells)),
+                lastAdvance = 0,
+                pageFlipInterval = 100;
+
+        function startAnimation() {
+            lastAdvance = 0;
+            window.requestAnimationFrame(animate);
+        }
+        function animate(time) {
+            canvasContext.clearRect(0, 0, canvasObj.width, canvasObj.height);
+            canvasContext.drawImage(spriteSheet, 0, 0);
+            animationSprite.paint(canvasContext);
+            if (time - lastAdvance > pageFlipInterval) {
+                animationSprite.painter.advance();
+                lastAdvance = time;
+            }
+            window.requestAnimationFrame(animate);
+        }
+        animationSprite.setPosition(440, 100);
+        spriteSheet.src = '../images/running-sprite-sheet.png';
+        spriteSheet.onload = function(e) {
+            canvasContext.drawImage(spriteSheet, 0, 0);
+            startAnimation();
+        };
+        */
+    </script>
+</body>
+</html>

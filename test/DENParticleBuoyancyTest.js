@@ -9,6 +9,6 @@
 test ("DENParticleBuoyancy Test", function() {
    var buonyancyForce = new DENParticleBuoyancy(10, 30, 20, 1000);
 
-   ok(buonyancyForce instanceof DENParticleBuoyancy, "Consruction");
+   ok(buonyancyForce instanceof DENParticleBuoyancy, "Construction");
    ok(true, buonyancyForce.toString());
 });

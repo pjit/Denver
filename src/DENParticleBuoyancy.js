@@ -40,12 +40,13 @@ DENParticleBuoyancy.prototype.updateForce = function(particle, duration) {
    // if we are at max depth
    if (depth <= this.waterHeight - this.maxDepth) {
       force.y = this.liquidDensity*this.volume;
-      p.addForce(force);
+      particle.addForce(force);
       return;
    }
    // we are partly submerged
-   force.y = this.liquidDensity*this.volume*(depth - this.maxDepth - this.waterHeight) / 2*this.maxDepth;
-   p.addForce(force);
+   force.y = this.liquidDensity*this.volume*
+      (depth - this.maxDepth - this.waterHeight) / 2*this.maxDepth;
+   particle.addForce(force);
 };
 
 //
